@@ -1,8 +1,8 @@
-﻿using BookDemo.Models;
+﻿using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BookDemo.Repositories.Config
+namespace Repositories.EFCore.Config
 {
 	public class BookConfig : IEntityTypeConfiguration<Book>
 	{

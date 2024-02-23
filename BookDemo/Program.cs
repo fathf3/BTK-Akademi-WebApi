@@ -1,16 +1,21 @@
-using BookDemo.Repositories;
+
+using BookDemo.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Repositories.EFCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddControllers()
+	.AddApplicationPart(typeof(Presentation.AssemblyRefrence).Assembly)
+	.AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<RepositoryContext>(opt => 
-	opt.UseSqlServer(builder.Configuration.GetConnectionString("sqlConnection")));
+builder.Services.ConfigureSqlContext(builder.Configuration);
+builder.Services.ConfigureRepositoryManager();
+builder.Services.ConfigureServiceManager();
 
 var app = builder.Build();
 
@@ -18,7 +23,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
-	app.UseSwaggerUI();
+	app.UseSwaggerUI();		
 }
 
 app.UseHttpsRedirection();
