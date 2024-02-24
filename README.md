@@ -1,1 +1,1 @@
-![]([https://i.hizliresim.com/rsxiz4i.png])
+![a]([https://i.hizliresim.com/rsxiz4i.png])
