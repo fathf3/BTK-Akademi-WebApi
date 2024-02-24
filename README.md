@@ -1,1 +1,1 @@
-![Alt text]([https://i.hizliresim.com/rsxiz4i.png])
+![]([https://i.hizliresim.com/rsxiz4i.png])
