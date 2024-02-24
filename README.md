@@ -1,1 +1,2 @@
-![a]([https://i.hizliresim.com/rsxiz4i.png])
+
+![.NetCore]([https://i.hizliresim.com/rsxiz4i.png)
