@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Entities.Exceptions;
+using Entities.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
@@ -37,17 +38,11 @@ namespace Presentation.Controllers
 		[HttpGet("{id:int}")]
 		public IActionResult GetOneBook([FromRoute(Name = "id")] int id)
 		{
-			try
-			{
-				var book = _manager.BookService.GetOneBookById(id, false);
-				return Ok(book);
-			}
-			catch (Exception ex)
-			{
+			var book = _manager
+				.BookService
+				.GetOneBookById(id, false);
 
-				throw new Exception(ex.Message);
-			}
-
+			return Ok(book);
 
 		}
 
@@ -74,50 +69,26 @@ namespace Presentation.Controllers
 		[HttpPut("{id:int}")]
 		public IActionResult UpdateOneBook([FromRoute(Name = "id")] int id, [FromBody] Book book)
 		{
-			try
-			{
-				_manager.BookService.UpdateOneBook(id, book, true);
+			_manager.BookService.UpdateOneBook(id, book, true);
 
-				return Ok(book);
-			}
-			catch (Exception ex)
-			{
-
-				throw new Exception(ex.Message);
-			}
-
+			return Ok(book);
 		}
 
 		[HttpDelete("{id:int}")]
 		public IActionResult DeleteOneBook([FromRoute(Name = "id")] int id)
 		{
-			try
-			{
-				var book = _manager.BookService.GetOneBookById(id, false);
 
-				if (book is null)
-					return NotFound(new
-					{
-						statusCode = 404,
-						message = $"Book with id : {id} could not found"
-					}); // 404
+			_manager.BookService.DeleteOneBook(id, false);
 
-				_manager.BookService.DeleteOneBook(id, false);
-				return Ok($"Book id : {id} deleted");
-			}
-			catch (Exception ex)
-			{
-
-				throw new Exception(ex.Message);
-			}
+			return Ok($"Book id : {id} deleted");
 
 		}
+		
 		[HttpPatch("{id:int}")]
 		public IActionResult PartiallyUpdateOneBook([FromRoute(Name = "id")] int id, [FromBody] JsonPatchDocument<Book> bookPatch)
 		{
 			var entity = _manager.BookService.GetOneBookById(id, true);
-			if (entity is null)
-				return NotFound();
+			
 			bookPatch.ApplyTo(entity);
 			_manager.BookService.UpdateOneBook(id, entity, true);
 			return NoContent();
