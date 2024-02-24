@@ -1,6 +1,1 @@
-
-
-<div >
-  
-  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg](https://i.hizliresim.com/rsxiz4i.png)"  />
-</div>
+![Alt text]([image link](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg](https://i.hizliresim.com/rsxiz4i.png)https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg](https://i.hizliresim.com/rsxiz4i.png)
