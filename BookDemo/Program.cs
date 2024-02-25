@@ -1,5 +1,6 @@
 
 using BookDemo.Extensions;
+using Entities.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using Repositories.EFCore;
@@ -11,10 +12,19 @@ LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nl
 
 // Add services to the container.
 
-builder.Services.AddControllers()
+builder.Services.AddControllers(config =>
+{
+	config.RespectBrowserAcceptHeader = true;
+	config.ReturnHttpNotAcceptable = true;
+})
+	.AddCustomCvsFormatter()
+	.AddXmlDataContractSerializerFormatters()
 	.AddApplicationPart(typeof(Presentation.AssemblyRefrence).Assembly)
 	.AddNewtonsoftJson();
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureSqlContext(builder.Configuration);
@@ -32,7 +42,7 @@ app.ConfigureExceptionHandler(logger);
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
-	app.UseSwaggerUI();		
+	app.UseSwaggerUI();
 }
 
 if (app.Environment.IsProduction())
