@@ -6,10 +6,11 @@ namespace BookDemo.Utilities.AutoMapper
 {
 	public class MappingProfile : Profile
 	{
-        public MappingProfile()
-        {
-            CreateMap<BookDtoForUpdate, Book>();
-            CreateMap<BookDto, Book>().ReverseMap();
-        }
-    }
+		public MappingProfile()
+		{
+			CreateMap<BookDtoForUpdate, Book>().ReverseMap();
+			CreateMap<BookDtoForInsertion, Book>().ReverseMap();
+			CreateMap<BookDto, Book>().ReverseMap();
+		}
+	}
 }
