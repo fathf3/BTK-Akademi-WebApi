@@ -126,3 +126,29 @@
 2024-02-27 19:27:05.0476 Info Configuration initialized.
 2024-02-27 19:28:30.5637 Info AppDomain Shutting down. LogFactory closing...
 2024-02-27 19:28:30.5799 Info LogFactory has been closed.
+2024-02-27 19:45:31.8781 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-27 19:45:31.9466 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-27 19:45:31.9466 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-27 19:45:31.9723 Info Configuration initialized.
+2024-02-27 19:46:57.7384 Info AppDomain Shutting down. LogFactory closing...
+2024-02-27 19:46:57.7562 Info LogFactory has been closed.
+2024-02-27 19:48:17.6228 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-27 19:48:17.6380 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-27 19:48:17.6380 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-27 19:48:17.6630 Info Configuration initialized.
+2024-02-27 19:49:25.0631 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-27 19:49:25.0777 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-27 19:49:25.0892 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-27 19:49:25.0892 Info Configuration initialized.
+2024-02-27 19:50:54.9127 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-27 19:50:54.9282 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-27 19:50:54.9415 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-27 19:50:54.9577 Info Configuration initialized.
+2024-02-27 19:51:24.4205 Info AppDomain Shutting down. LogFactory closing...
+2024-02-27 19:51:24.4346 Info LogFactory has been closed.
+2024-02-27 19:51:29.2353 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-27 19:51:29.2505 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-27 19:51:29.2505 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-27 19:51:29.2723 Info Configuration initialized.
+2024-02-27 19:52:02.9193 Info AppDomain Shutting down. LogFactory closing...
+2024-02-27 19:52:02.9193 Info LogFactory has been closed.

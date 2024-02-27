@@ -7,7 +7,7 @@
 
         public bool ValidPriceRange => MaxPrice > MinPrice;
 
-
+        public String? SearchTerm { get; set; }
 
 
     }
