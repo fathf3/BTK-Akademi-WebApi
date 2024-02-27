@@ -10,7 +10,7 @@ namespace Repositories.Contracts
 	{
 		// UnitOfWork pattern
 		IBookRepository Book {  get; }
-		void Save();
+		Task SaveAsync(); // void -> Task
 
 
 	}
