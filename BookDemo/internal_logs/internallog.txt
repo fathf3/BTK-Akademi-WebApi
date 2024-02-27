@@ -76,3 +76,21 @@
 2024-02-27 14:01:52.9547 Info Configuration initialized.
 2024-02-27 14:03:21.5918 Info AppDomain Shutting down. LogFactory closing...
 2024-02-27 14:03:21.6044 Info LogFactory has been closed.
+2024-02-27 14:22:02.3816 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-27 14:22:02.3957 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-27 14:22:02.4068 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-27 14:22:02.4193 Info Configuration initialized.
+2024-02-27 14:22:15.4840 Info AppDomain Shutting down. LogFactory closing...
+2024-02-27 14:22:15.4964 Info LogFactory has been closed.
+2024-02-27 14:23:03.5256 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-27 14:23:03.5256 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-27 14:23:03.5470 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-27 14:23:03.5470 Info Configuration initialized.
+2024-02-27 14:25:27.5352 Info AppDomain Shutting down. LogFactory closing...
+2024-02-27 14:25:27.5436 Info LogFactory has been closed.
+2024-02-27 14:39:32.3270 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-27 14:39:32.3403 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-27 14:39:32.3403 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-27 14:39:32.3587 Info Configuration initialized.
+2024-02-27 14:51:38.2959 Info AppDomain Shutting down. LogFactory closing...
+2024-02-27 14:51:38.3106 Info LogFactory has been closed.
