@@ -2,9 +2,8 @@
 using BookDemo.Extensions;
 using Entities.Exceptions;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using NLog;
-using Repositories.EFCore;
+using Presentation.ActionFilters;
 using Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 
 // Add services to the container.
-
+	
 builder.Services.AddControllers(config =>
 {
 	config.RespectBrowserAcceptHeader = true;
@@ -22,6 +21,8 @@ builder.Services.AddControllers(config =>
 	.AddXmlDataContractSerializerFormatters()
 	.AddApplicationPart(typeof(Presentation.AssemblyRefrence).Assembly)
 	.AddNewtonsoftJson();
+
+
 
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
@@ -37,6 +38,9 @@ builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureLoggerService();
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.ConfigureActionFilters();
+
+
 
 var app = builder.Build();
 
