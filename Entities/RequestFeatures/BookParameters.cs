@@ -9,6 +9,11 @@
 
         public String? SearchTerm { get; set; }
 
+        public BookParameters()
+		{
+            // Eger bir sıralama girilmediyse Id ye gore sıralar
+			OrderBy = "id"; 
+        }
 
     }
 
