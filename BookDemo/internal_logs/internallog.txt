@@ -158,3 +158,19 @@
 2024-02-27 20:20:48.5776 Info Configuration initialized.
 2024-02-27 20:23:05.0662 Info AppDomain Shutting down. LogFactory closing...
 2024-02-27 20:23:05.0800 Info LogFactory has been closed.
+2024-02-28 02:18:36.9774 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-28 02:18:37.0393 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-28 02:18:37.0518 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-28 02:18:37.0605 Info Configuration initialized.
+2024-02-28 02:19:08.5544 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-28 02:19:08.5660 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-28 02:19:08.5753 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-28 02:19:08.5753 Info Configuration initialized.
+2024-02-28 02:19:39.1482 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-28 02:19:39.1727 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-28 02:19:39.1727 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-28 02:19:39.1981 Info Configuration initialized.
+2024-02-28 02:19:59.3490 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-02-28 02:19:59.3608 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-02-28 02:19:59.3608 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\fatih\OneDrive\Masaüstü\Dosyalar\Code\CSharp\BookDemo\BookDemo\nlog.config
+2024-02-28 02:19:59.3777 Info Configuration initialized.

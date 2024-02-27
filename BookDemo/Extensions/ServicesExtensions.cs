@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entities.DataTransferObjects.Book;
+using Microsoft.EntityFrameworkCore;
 using Presentation.ActionFilters;
 using Repositories.Contracts;
 using Repositories.EFCore;
@@ -40,7 +41,10 @@ namespace BookDemo.Extensions
 			});
 		}
 
-
+		public static void ConfigureDataShaper(this IServiceCollection services)
+		{
+			services.AddScoped<IDataShaper<BookDto>, DataShaper<BookDto>>();
+		}
 
 	}
 }
