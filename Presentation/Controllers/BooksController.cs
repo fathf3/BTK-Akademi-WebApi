@@ -11,6 +11,7 @@ using System.Text.Json;
 
 namespace Presentation.Controllers
 {
+	[ApiVersion("1.0")]
 	// Controller bazlı filtreleme
 	[ServiceFilter(typeof(LogFilterAttribute))]
 	[ApiController]
@@ -24,7 +25,8 @@ namespace Presentation.Controllers
 			_manager = manager;
 		}
 
-		[HttpGet]
+		[HttpHead]
+		[HttpGet(Name ="GetAllBooksAsync")]
 		public async Task<IActionResult> GetAllBooksAsync([FromQuery] BookParameters bookParameters)
 		{
 			var pagedResult = await _manager.BookService
@@ -49,7 +51,7 @@ namespace Presentation.Controllers
 
 
 		[ServiceFilter(typeof(ValidationFilterAttribute))]
-		[HttpPost]
+		[HttpPost(Name = "CreateOneBookAsync")]
 		public async Task<IActionResult> CreateOneBookAsync([FromBody] BookDtoForInsertion bookDto)
 		{
 			if (bookDto is null)
@@ -109,6 +111,12 @@ namespace Presentation.Controllers
 
 			return NoContent(); // 204
 
+		}
+		[HttpOptions]
+		public IActionResult GetBooksOptions()
+		{
+			Response.Headers.Add("Allow", "GET, PUT, POST, PATCH, DELETE, HEAD, OPTIONS");
+			return Ok();
 		}
 	}
 }

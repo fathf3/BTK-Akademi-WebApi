@@ -41,7 +41,7 @@ namespace Services
 			await _manager.SaveAsync();
 		}
 
-		public async Task<(IEnumerable<ExpandoObject> books, MetaData metaData)>
+		public async Task<(IEnumerable<ShapedEntity> books, MetaData metaData)>
 		   GetAllBooksAsync(BookParameters bookParameters,
 		   bool trackChanges)
 		{
@@ -56,6 +56,12 @@ namespace Services
 
 			var shapedData = _shaper.ShapeData(booksDto, bookParameters.Fields);
 			return (shapedData, booksWithMetaData.MetaData);
+		}
+
+		public async Task<List<Book>> GetAllBooksAsync(bool trackChanges)
+		{
+			var books = await _manager.Book.GetAllBooksAsync(trackChanges);
+			return books;
 		}
 
 		public async Task<BookDto> GetOneBookByIdAsync(int id, bool trackChanges)

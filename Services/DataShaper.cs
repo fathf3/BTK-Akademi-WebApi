@@ -1,4 +1,5 @@
-﻿using Services.Contracts;
+﻿using Entities.Models;
+using Services.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -18,13 +19,13 @@ namespace Services
 			Properties = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
 		}
 
-		public IEnumerable<ExpandoObject> ShapeData(IEnumerable<T> entites, string filedsString)
+		public IEnumerable<ShapedEntity> ShapeData(IEnumerable<T> entites, string filedsString)
 		{
 			var requiredFields = GetRequiredProperties(filedsString);
 			return FetchData(entites, requiredFields);	
 		}
 
-		public ExpandoObject ShapeData(T entity, string filedsString)
+		public ShapedEntity ShapeData(T entity, string filedsString)
 		{
 			var requiredProperties = GetRequiredProperties(filedsString);
 			return FetchDataForEntity(entity, requiredProperties);
@@ -59,22 +60,24 @@ namespace Services
 			return requiredFields;
 		}
 
-		private ExpandoObject FetchDataForEntity(T entity, IEnumerable<PropertyInfo> requiredProperties)
+		private ShapedEntity FetchDataForEntity(T entity, IEnumerable<PropertyInfo> requiredProperties)
 		{
-			var shapeObject = new ExpandoObject();
+			var shapeObject = new ShapedEntity();
 			foreach (var property in requiredProperties)
 			{
 				var objectPropertyValue = property.GetValue(entity);
-				shapeObject.TryAdd(property.Name, objectPropertyValue);
+				shapeObject.Entity.TryAdd(property.Name, objectPropertyValue);
 
 
 			}
+			var objectProperty = entity.GetType().GetProperty("Id");
+			shapeObject.Id = (int)objectProperty.GetValue(entity);
 			return shapeObject;
 		}
 
-		private IEnumerable<ExpandoObject> FetchData(IEnumerable<T> entites ,IEnumerable<PropertyInfo> requiredProperties)
+		private IEnumerable<ShapedEntity> FetchData(IEnumerable<T> entites ,IEnumerable<PropertyInfo> requiredProperties)
 		{
-			var shapedData = new List<ExpandoObject>();
+			var shapedData = new List<ShapedEntity>();
 			foreach (var entity in entites)
 			{
 				var shapedObject = FetchDataForEntity (entity, requiredProperties);
