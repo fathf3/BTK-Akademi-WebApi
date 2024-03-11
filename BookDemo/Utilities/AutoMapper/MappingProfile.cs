@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Entities.DataTransferObjects.Book;
+using Entities.DataTransferObjects.User;
 using Entities.Models;
 
 namespace BookDemo.Utilities.AutoMapper
@@ -11,6 +12,7 @@ namespace BookDemo.Utilities.AutoMapper
 			CreateMap<BookDtoForUpdate, Book>().ReverseMap();
 			CreateMap<BookDtoForInsertion, Book>().ReverseMap();
 			CreateMap<BookDto, Book>().ReverseMap();
+			CreateMap<UserForRegistrationDto, User>().ReverseMap();
 		}
 	}
 }
