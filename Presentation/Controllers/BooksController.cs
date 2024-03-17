@@ -2,6 +2,7 @@
 using Entities.Exceptions;
 using Entities.Models;
 using Entities.RequestFeatures;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,7 +26,8 @@ namespace Presentation.Controllers
 			_manager = manager;
 		}
 
-		[HttpHead]
+        [Authorize]
+        [HttpHead]
 		[HttpGet(Name ="GetAllBooksAsync")]
 		public async Task<IActionResult> GetAllBooksAsync([FromQuery] BookParameters bookParameters)
 		{
@@ -37,8 +39,8 @@ namespace Presentation.Controllers
 			return Ok(pagedResult.books);
 
 		}
-
-		[HttpGet("{id:int}")]
+        [Authorize]
+        [HttpGet("{id:int}")]
 		public async Task<IActionResult> GetOneBookAsync([FromRoute(Name = "id")] int id)
 		{
 			var book = await _manager
@@ -49,8 +51,8 @@ namespace Presentation.Controllers
 
 		}
 
-
-		[ServiceFilter(typeof(ValidationFilterAttribute))]
+        [Authorize(Roles = "Admin, Editor")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
 		[HttpPost(Name = "CreateOneBookAsync")]
 		public async Task<IActionResult> CreateOneBookAsync([FromBody] BookDtoForInsertion bookDto)
 		{
@@ -65,8 +67,8 @@ namespace Presentation.Controllers
 			return StatusCode(201, book);
 
 		}
-
-		[ServiceFilter(typeof(ValidationFilterAttribute))]
+        [Authorize(Roles = "Admin, Editor")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
 		[HttpPut("{id:int}")]
 		public async Task<IActionResult> UpdateOneBookAsync([FromRoute(Name = "id")] int id, [FromBody] BookDtoForUpdate bookDto)
 		{
@@ -81,8 +83,8 @@ namespace Presentation.Controllers
 
 			return Ok(bookDto);
 		}
-
-		[HttpDelete("{id:int}")]
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("{id:int}")]
 		public async Task<IActionResult> DeleteOneBookAsync([FromRoute(Name = "id")] int id)
 		{
 
