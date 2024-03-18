@@ -326,3 +326,15 @@
 2024-03-17 16:23:40.2401 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
 2024-03-17 16:23:40.2644 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\Code\CSharp\BTK-Akademi-WebApi\BookDemo\nlog.config
 2024-03-17 16:23:40.2828 Info Configuration initialized.
+2024-03-17 18:42:25.2968 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-17 18:42:25.3094 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-17 18:42:25.3189 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\Code\CSharp\BTK-Akademi-WebApi\BookDemo\nlog.config
+2024-03-17 18:42:25.3189 Info Configuration initialized.
+2024-03-17 18:42:26.7033 Info AppDomain Shutting down. LogFactory closing...
+2024-03-17 18:42:26.7118 Info LogFactory has been closed.
+2024-03-17 18:42:33.3580 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-17 18:42:33.3697 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-17 18:42:33.3790 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\Code\CSharp\BTK-Akademi-WebApi\BookDemo\nlog.config
+2024-03-17 18:42:33.3790 Info Configuration initialized.
+2024-03-17 18:42:34.6629 Info AppDomain Shutting down. LogFactory closing...
+2024-03-17 18:42:34.6629 Info LogFactory has been closed.
