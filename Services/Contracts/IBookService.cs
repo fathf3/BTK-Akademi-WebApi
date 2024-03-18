@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Services.Contracts
 {
-	public interface IBookService
+    public interface IBookService
 	{
 		Task<(IEnumerable<ShapedEntity> books, MetaData metaData)> GetAllBooksAsync(BookParameters bookParameters, bool trackChanges);
 		Task<BookDto> GetOneBookByIdAsync(int id, bool trackChanges);

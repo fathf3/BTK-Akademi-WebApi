@@ -9,7 +9,7 @@ using System.Dynamic;
 
 namespace Services
 {
-	public class BookManager : IBookService
+    public class BookManager : IBookService
 	{
 		private readonly IRepositoryManager _manager;
 		private readonly ILoggerService _logger;
@@ -105,4 +105,5 @@ namespace Services
 
 		}
 	}
+
 }
